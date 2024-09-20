@@ -182,37 +182,3 @@ print(len(circle1))  # Вывод: 15
 
 # Проверка объёма куба
 print(cube1.get_volume())  # Вывод: 216
-
-
-# print(circle1.get_sides())
-# circle1.set_sides(10)
-# print(circle1.get_sides())
-# print(len(circle1))
-# print(circle1.get_square())
-# print("circle1.get_radius()", circle1.get_radius())
-# circle1.set_color(128, 64, 32)
-# print("128, 64, 32", circle1.get_color())
-#
-# triangle1 = Triangle((200, 200, 100), 4, 5, 3)
-# print(triangle1.get_sides())
-# print(len(triangle1))
-# print(triangle1.get_height())
-# print("triangle1.get_square", triangle1.get_square())
-# triangle1.set_sides(3, 4, 5)
-# print(triangle1.get_sides())
-# triangle1.set_color(128, 64, 32)
-# print("128, 64, 32", triangle1.get_color())
-#
-# cube2 = Cube((254, 254, 254), 13)
-# print(cube2.get_sides())
-# print(len(cube2))
-# print("get_volume", cube2.get_volume())
-# cube2.set_sides(3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3)
-# print(cube2.get_sides())
-# cube2.set_color(16, 32, 64)
-# print("16, 32, 64", cube2.get_color())
-
-# print(Figure.mro())
-# print(Circle.mro())
-# print(Triangle.mro())
-# print(Cube.mro())
