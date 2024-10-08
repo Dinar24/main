@@ -1,14 +1,14 @@
-# Lamda-функция:
-print('lambda-функция:')
+# Lambda-функция:
+print('Lambda-функция:')
 first = 'Мама мыла раму'
-second = 'Рамёна мала было'
+second = 'Рамена мало было'
 
 Matching_letters = list(map(lambda x, y: x == y, first, second))
 print(Matching_letters)
 print()
 
 # Замыкание:
-print('Замыкание')
+print('Замыкание:')
 
 
 def get_advanced_writer(file_name):
@@ -21,15 +21,15 @@ def get_advanced_writer(file_name):
 
 
 write = get_advanced_writer('example.txt')
-write('Это строчка', ['A', 'это', 'уже', 'число', 5, 'в', 'списке'])
+write('Это строчка', ['А', 'это', 'уже', 'число', 5, 'в', 'списке'])
 with open('example.txt', 'r', encoding='utf-8') as file:
     print(file.read())
 print()
 
-# Метод __call__
+# Метод __call__:
 from random import choice
 
-print('Метод __call__')
+print('Метод __call__:')
 
 
 class MysticBall:
