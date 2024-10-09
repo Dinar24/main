@@ -3,28 +3,25 @@ class StepValueError(ValueError):
 
 
 class Iterator:
-
     def __init__(self, start, stop, step=1):
-        self.start = start
-        self.stop = stop
-        self.step = step
-        self.pointer = 0
-        if self.step == 0:
-            raise StepValueError('Шаг не может быть равен 0')
+        if step == 0:
+            raise StepValueError('шаг не может быть равен 0')
+        self.start = start    # целое число с которого начинается итерация.
+        self.stop = stop      # целое число на котором заканчивается итерация.
+        self.step = step      # шаг с которой совершается итерация.
+        self.pointer = start  # указывает на текущее число в итерации
+        self.step_sign = 1 if step > 0 else -1
 
     def __iter__(self):
-        self.pointer = self.start - self.step
+        self.pointer = self.start
         return self
 
     def __next__(self):
+        if self.pointer * self.step_sign > self.stop * self.step_sign:
+            raise StopIteration()
+        p = self.pointer
         self.pointer += self.step
-        if self.step > 0:
-            if self.pointer > self.stop:
-                raise StepValueError()
-        if self.step < 0:
-            if self.pointer < self.stop:
-                raise StepValueError()
-        return self.pointer
+        return p
 
 
 try:
@@ -34,34 +31,23 @@ try:
 except StepValueError:
     print('Шаг указан неверно')
 
-try:
-    iter2 = Iterator(-5, 1)
-    for i in iter2:
-        print(i, end=' ')
-    print()
-except StepValueError:
-    print()
+iter2 = Iterator(-5, 1)
+iter3 = Iterator(6, 15, 2)
+iter4 = Iterator(5, 1, -1)
+iter5 = Iterator(10, 1)
 
-try:
-    iter3 = Iterator(6, 15, 2)
-    for i in iter3:
-        print(i, end=' ')
-    print()
-except StepValueError:
-    print()
+for i in iter2:
+    print(i, end=' ')
+print()
 
-try:
-    iter4 = Iterator(5, 1, -1)
-    for i in iter4:
-        print(i, end= ' ')
-    print()
-except StepValueError:
-    print()
+for i in iter3:
+    print(i, end=' ')
+print()
 
-try:
-    iter5 = Iterator(10, 1)
-    for i in iter5:
-        print(i, end= ' ')
-    print()
-except StepValueError:
-    print()
+for i in iter4:
+    print(i, end=' ')
+print()
+
+for i in iter5:
+    print(i, end=' ')
+print()
