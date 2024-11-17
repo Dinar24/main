@@ -1,56 +1,16 @@
-# -*- coding: utf-8 -*-
+# This is a sample Python script.
 
-def task1() -> None:
-    """
-    Выведите на экран(в консоль) результат: возведение числа 0 в сетепень 0.5, после умножение на 5.
-    Предполагаемый результат: 15.0
-    """
+# Press Shift + F10 to execute it or replace it with your code.
+# Press Double Shift to search every here for classes, files, tool windows, actions, and settings.
 
-    # 1st program
-    print(9 ** 0.5 * 5)
+def print_hi(name):
+    # Use a break point in the code line below to debug your script.
+    print(f'Hi, {name}') # Press Ctrl+F8 to toggle the break point.
 
 
-def task2() -> None:
-    """
-    Убедитесь в том что 9.99 больше 9.98 и 1000 не равно 1000.1 одновременно, выведете результат на экран(в консоль)
-    Предполагаемый результат: True
-    """
-
-    # 2nd program
-    print(9.99 > 9.98 and 1000 != 1000.1)
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
 
 
-def task3() -> None:
-    """
-    Выведите на экран(в консоль) 2 умноженное на 2 плюс 2 без приоритета.
-    Выведите на экран(в консоль) 2 умноженное на 2 плюс 2 с приоритетом для сложения.
-    Выведите на экран(в консоль) результат этих двух выражений.
-    Предполагаемый результат ( с использованием ==): False
-    """
-
-    # 3rd  program
-    print(2 * 2 + 2)
-    print(2 * (2 + 2))
-    print(2 * 2 + 2 == 2 * (2 + 2))
-
-
-def task4() -> None:
-    """
-    Дана строка '123.456'
-    Вывести на экран первую цифру после запятой - 4.
-    Начало алгоритма решения:
-
-    Преобразуйте в строку дробное число. ('123.456 -> 123.456)
-    Умножьте на 10, чтобы сместить 4 в целую часть. (1234.56)
-    Следующие шаги алгоритма составьте самостоятельно. В них вам понадобится команда int() и остаточное деление на 10.
-    """
-
-    # 4 th program
-    print(int(float('123.456') * 10) % 10)
-
-
-if __name__ == "__main__":
-    task1()
-    task2()
-    task3()
-    task4()
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
