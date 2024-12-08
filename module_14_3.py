@@ -23,10 +23,10 @@ button2=InlineKeyboardButton(text='Формулы расчёта', callback_data
 kb.row(button, button2)
 
 pr_kb=InlineKeyboardMarkup(row_width=4, resize_keyboard=True)
-pr_button1=InlineKeyboardButton(text='Product1', callback_data='product_buying')
-pr_button2=InlineKeyboardButton(text='Product2', callback_data='product_buying')
-pr_button3=InlineKeyboardButton(text='Product3', callback_data='product_buying')
-pr_button4=InlineKeyboardButton(text='Product4', callback_data='product_buying')
+pr_button1=InlineKeyboardButton(text='Product_photo', callback_data='product_buying')
+pr_button2=InlineKeyboardButton(text='Product_photo', callback_data='product_buying')
+pr_button3=InlineKeyboardButton(text='Product_photo', callback_data='product_buying')
+pr_button4=InlineKeyboardButton(text='Product_photo', callback_data='product_buying')
 pr_kb.add(pr_button1, pr_button2, pr_button3, pr_button4)
 
 class UserState(StatesGroup):
