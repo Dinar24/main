@@ -17,8 +17,8 @@ texts = [
     ]
 products = ['Носки','Футболка','Джинсы','Куртка']
 prices = ['100', '200', '300', '400']
-for prod, text, pr in zip(products, texts, prices):
-    cursor.execute('INSERT INTO Products(title, description, price) VALUES (?, ?, ?)', (prod, text, pr))
+# for prod, text, pr in zip(products, texts, prices):
+#     cursor.execute('INSERT INTO Products(title, description, price) VALUES (?, ?, ?)', (prod, text, pr))
 
 def get_all_product():
     connection = sqlite3.connect('Products.db')
