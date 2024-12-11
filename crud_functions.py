@@ -28,3 +28,11 @@ def get_all_products():
 
     connection.close()
     return products
+
+
+def is_included():
+    return None
+
+
+def add_user():
+    return None
