@@ -1,0 +1,34 @@
+Переход в проект: cd myapp
+Переход в консоль: python manage.py shell
+
+QuerySet запросы:
+
+#добавление покупателей
+
+from task1.models import Buyer
+Buyer.objects.create(name='Vova', balance=1500.05, age=24)
+Buyer.objects.create(name='Sveta', balance=42.15, age=52)
+Buyer.objects.create(name='Urban', balance=0.5, age=16)
+
+#проверка на выбор
+Buyer.objects.all()
+Buyer.objects.count()
+
+#добавление игр
+
+from task1.models import Games
+Games.objects.create(title='Grand Theft Auto: San Andreas', cost=31, size=46.2, description='Game of the year', age_limited=1)
+Games.objects.create(title='Assassin Creed 2', cost=5, size=0.5, description='Old Game', age_limited=0)
+Games.objects.create(title='Call of Duty: Modern Warfare 2', cost=12, size=36.6, description='Who kills Mark', age_limited=1)
+
+#проверка на выбор
+Games.objects.all()
+Games.objects.count()
+
+#связи
+first_buyer=Buyer.objects.get(id=1)
+second_buyer=Buyer.objects.get(id=2)
+third_buyer=Buyer.objects.get(id=3)
+Games.objects.get(id=1).buyer.set((first_buyer, third_buyer))
+Games.objects.get(id=2).buyer.set((first_buyer, third_buyer))
+Games.objects.get(id=3).buyer.set((first_buyer, second_buyer))
